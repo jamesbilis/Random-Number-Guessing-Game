@@ -1,40 +1,44 @@
-# Random-Number-Guessing-Game
-1. The game begins by generating a random number between 1 and 100 using the generate_random_number(min_num, max_num) function.
+# Random Number Guessing Game
 
-2. A loop is used to repeatedly prompt the user to guess the number until they guess correctly.
+This is a simple command-line game built in Python. The program randomly selects a number between 1 and 100 and prompts the user to guess it. It provides hints along the way and tracks the number of attempts.
 
-3. For each guess:
-   - The user's input is converted to an integer.
-   - The number of attempts is tracked and incremented.
-   - The guess is passed to check_guess(random_num, user_guess), which returns True if it matches the target number.
+## Technologies
 
-4. If the guess is incorrect:
-   - A hint is printed telling the user to guess higher or lower.
-   - After exactly 2 incorrect attempts, an additional hint is given. The hint is chosen randomly from:
-     • Whether the number is even or odd.
-     • Whether it is a multiple of 5.
-     • Whether its square is greater, less than, or equal to 1000.
+- Python (standard library)
+- random
+- functions
 
-5. Once the guess is correct, the program displays the number of attempts taken.
+## Features
 
-6. The game then asks the user if they would like to try again.
+- Custom hint logic: "higher" or "lower" after each guess
+- Extra hints after 2 incorrect tries (e.g., even/odd, multiple of 5)
+- Input validation to ensure clean user experience
+- Replay functionality at the end of each game
+- Modular design using Python functions
 
-7. The user responds with Yes or No. 
+## How to Play
 
-8. If yes, the game starts over again (step 1). If no, the console prints "Alright, see you next time!" and the application ends. 
+```bash
+python guessing_game.py
+```
 
+Follow the prompts and try to guess the number with the fewest attempts possible!
 
-The following functions were utilized in this application:
+## Files
 
-1. generate_random_number(min_num, max_num):
-   • Returns a random integer in the range [min_num, max_num].
+```
+guessing-game/
+│
+├── guessing_game.py      # Main game file
+└── README.md             # Overview and instructions
+```
 
-2. check_guess(random_num, user_guess):
-   • Returns True if the guess is correct, otherwise False.
+## Example Hint Logic
 
-3. get_additional_hint(random_num):
-   • Randomly selects and returns one of three possible hints to help the player.
+- "Try a higher number!"
+- "The number is even and a multiple of 5"
+- "Correct! You guessed it in 7 tries."
 
-*The program handles invalid inputs (e.g., letters or special characters) using a try-except block to avoid crashing.
+## License
 
- 
+MIT License
